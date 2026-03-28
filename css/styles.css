@@ -172,3 +172,25 @@ body {
   flex-direction: column;
   gap: var(--spacing-200);
 }
+
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-200);
+  background-color: var(--grey-800);
+}
+
+.password__text {
+  color: var(--grey-700);
+}
+
+.password__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.password__copy:hover {
+  filter: brightness(0) invert(1);
+}
