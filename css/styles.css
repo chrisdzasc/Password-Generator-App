@@ -161,3 +161,8 @@ body {
   width: 91.5%;
   max-width: 54.0rem;
 }
+
+.app__heading {
+  text-align: center;
+  color: var(--grey-600);
+}
