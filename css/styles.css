@@ -250,3 +250,55 @@ body {
   height: 0.8rem;
   background: var(--grey-850);
 }
+
+.characters-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  padding: 0;
+  border: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
+}
+
+.option {
+  display: flex;
+  gap: var(--spacing-200);
+}
+
+.option__checkbox {
+  appearance: none;
+  width: 2.0rem;
+  height: 2.0rem;
+  background: none;
+  border: 0.2rem solid var(--grey-200);
+  cursor: pointer;
+}
+
+.option__checkbox:hover,
+.option__checkbox:active {
+  border: 0.2rem solid var(--green-200);
+}
+
+.option__checkbox:checked {
+  background-color: var(--green-200);
+  background-image: url('../assets/images/icon-check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.option__label {
+  color: var(--grey-200);
+}
