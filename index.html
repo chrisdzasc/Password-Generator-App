@@ -33,63 +33,61 @@
 
       </div>
 
-      <div>
+      <div class="configurator">
         <div>
           <div>
             <div>
-              <div>
-                <label for="characterLength">Character Length</label>
+              <label for="characterLength">Character Length</label>
 
-                <p>0</p>
-              </div>
-                <input type="range" min="0" max="15" value="0" id="characterLength">
+              <p>0</p>
             </div>
+              <input type="range" min="0" max="15" value="0" id="characterLength">
           </div>
+        </div>
 
-          <fieldset>
+        <fieldset>
 
-            <legend>Character options</legend>
-            <div>
-              <input type="checkbox" id="uppercaseLetters" name="uppercaseLetters">
-              <label for="uppercaseLetters">Include Uppercase Letters</label>
-            </div>
-
-            <div>
-              <input type="checkbox" id="lowercaseLetters" name="lowercaseLetters">
-              <label for="lowercaseLetters">Include Lowercase Letters</label>
-            </div>
-
-            <div>
-              <input type="checkbox" id="numbers" name="numbers">
-              <label for="numbers">Include Numbers</label>
-            </div>
-
-            <div>
-              <input type="checkbox" id="symbols" name="symbols">
-              <label for="symbols">Include Symbols</label>
-            </div>
-          </fieldset>
+          <legend>Character options</legend>
+          <div>
+            <input type="checkbox" id="uppercaseLetters" name="uppercaseLetters">
+            <label for="uppercaseLetters">Include Uppercase Letters</label>
+          </div>
 
           <div>
-            <div>
-              <p>Strength</p>
-
-              <div>
-                <div></div>
-
-                <div></div>
-
-                <div></div>
-
-                <div></div>
-              </div>
-            </div>
-
-            <button type="button">
-              Generate
-              <img src="./assets/images/icon-arrow-right.svg" alt="">
-            </button>
+            <input type="checkbox" id="lowercaseLetters" name="lowercaseLetters">
+            <label for="lowercaseLetters">Include Lowercase Letters</label>
           </div>
+
+          <div>
+            <input type="checkbox" id="numbers" name="numbers">
+            <label for="numbers">Include Numbers</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="symbols" name="symbols">
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </fieldset>
+
+        <div>
+          <div>
+            <p>Strength</p>
+
+            <div>
+              <div></div>
+
+              <div></div>
+
+              <div></div>
+
+              <div></div>
+            </div>
+          </div>
+
+          <button type="button">
+            Generate
+            <img src="./assets/images/icon-arrow-right.svg" alt="">
+          </button>
         </div>
       </div>
     </form>

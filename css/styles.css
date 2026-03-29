@@ -194,3 +194,11 @@ body {
 .password__copy:hover {
   filter: brightness(0) invert(1);
 }
+
+.configurator {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  padding: var(--spacing-200);
+  background-color: var(--grey-800);
+}
