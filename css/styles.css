@@ -368,4 +368,60 @@ body {
   .generator {
     gap: var(--spacing-300);
   }
+
+  .password {
+    padding: var(--spacing-200) var(--spacing-400);
+  }
+
+  .password__text {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+
+  .configurator {
+    padding: var(--spacing-300) var(--spacing-400);
+  }
+
+  .characters {
+    gap: var(--spacing-200);
+  }
+
+  .characters__label {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .characters__count {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+
+  .option {
+    gap: var(--spacing-300);
+  }
+
+  .option__label {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .summary {
+    gap: var(--spacing-400);
+  }
+
+  .strength {
+    padding: var(--spacing-300) var(--spacing-400);
+  }
+
+  .strength__title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .generate {
+    gap: var(--spacing-300);
+    padding: var(--spacing-300) var(--spacing-2200);
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
 }
