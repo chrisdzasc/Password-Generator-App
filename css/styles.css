@@ -302,3 +302,57 @@ body {
 .option__label {
   color: var(--grey-200);
 }
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem var(--spacing-200);
+  background-color: var(--grey-850);
+}
+
+.strength__title {
+  color: var(--grey-600);
+  text-transform: uppercase;
+}
+
+.strength-bars {
+  display: flex;
+  gap: var(--spacing-100);
+}
+
+.strength-bars__bar {
+  width: 1.0rem;
+  height: 2.8rem;
+  border: 0.2rem solid var(--grey-200);
+}
+
+.generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-200);
+  padding: var(--spacing-200) var(--spacing-1300);
+  text-transform: uppercase;
+  color: var(--grey-800);
+  background-color: var(--green-200);
+  border: none;
+  cursor: pointer;
+}
+
+.generate:hover,
+.generate:active {
+  color: var(--green-200);
+  background-color: transparent;
+  border: 0.2rem solid var(--green-200);
+}
+
+.generate:hover .generate__icon {
+  filter: invert(94%) sepia(7%) saturate(2559%) hue-rotate(61deg) brightness(104%) contrast(108%);
+}
