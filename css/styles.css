@@ -119,27 +119,8 @@ input[type=number] {
 }
 
 /*  =================================================
-    Typography Utilities
+    Utilities
     =================================================   */
-.text-preset-1 {
-    font-size: 3.2rem;
-    line-height: 4.2rem;
-}
-
-.text-preset-2 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-}
-
-.text-preset-3 {
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-}
-
-.text-preset-4 {
-    font-size: 1.6rem;
-    line-height: 2.0rem;
-}
 
 .sr-only {
   position: absolute;
@@ -176,6 +157,8 @@ body {
 }
 
 .app__heading {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
   text-align: center;
   color: var(--grey-600);
 }
@@ -191,8 +174,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-200);
-  color: var(--grey-700);
   background-color: var(--grey-800);
+}
+
+.password__text {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--grey-700);
 }
 
 .password__button {
@@ -225,10 +213,14 @@ body {
 }
 
 .characters__label {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
   color: var(--grey-200);
 }
 
 .characters__count {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
   color: var(--green-200);
 }
 
@@ -297,6 +289,8 @@ body {
 }
 
 .option__label {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
   color: var(--grey-200);
 }
 
@@ -315,6 +309,8 @@ body {
 }
 
 .strength__title {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
   color: var(--grey-600);
   text-transform: uppercase;
 }
@@ -336,6 +332,8 @@ body {
   align-items: center;
   gap: var(--spacing-200);
   padding: var(--spacing-200) var(--spacing-1300);
+  font-size: 1.6rem;
+  line-height: 2.0rem;
   text-transform: uppercase;
   color: var(--grey-800);
   background-color: var(--green-200);
