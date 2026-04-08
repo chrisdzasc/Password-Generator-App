@@ -14,6 +14,14 @@ const symbolsCheckbox = document.querySelector("#symbols");
 const passwordText = document.querySelector("#password-text");
 const generatePasswordButton = document.querySelector("#generatePassword");
 const characterLength = document.querySelector("#characterLengthValue");
+const level1 = document.querySelector("#level1");
+const level2 = document.querySelector("#level2");
+const level3 = document.querySelector("#level3");
+const level4 = document.querySelector("#level4");
+const strengthLevelLabel = document.querySelector("#strengthLevelLabel");
+
+const optionsArray = [uppercaseLettersCheckbox, lowercaseLettersCheckbox, numbersCheckbox, symbolsCheckbox];
+
 
 function getRandomIndex(array) {
 
@@ -21,6 +29,48 @@ function getRandomIndex(array) {
     const max = array.length - 1;
 
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function strengthLevel() {
+    let filtered = optionsArray.filter(option => option.checked);
+
+    level1.style.setProperty('background-color', 'transparent');
+    level2.style.setProperty('background-color', 'transparent');
+    level3.style.setProperty('background-color', 'transparent');
+    level4.style.setProperty('background-color', 'transparent');
+
+    strengthLevelLabel.textContent = "";
+
+    
+
+    switch (filtered.length) {
+        case 1:
+            level1.style.setProperty('background-color', 'var(--red-500)');
+
+            strengthLevelLabel.textContent = "WEAK";
+            break;
+        case 2:
+            level1.style.setProperty('background-color', 'var(--orange-400)');
+            level2.style.setProperty('background-color', 'var(--orange-400)');
+
+            strengthLevelLabel.textContent = "FAIR";
+            break;
+        case 3:
+            level1.style.setProperty('background-color', 'var(--yellow-300)');
+            level2.style.setProperty('background-color', 'var(--yellow-300)');
+            level3.style.setProperty('background-color', 'var(--yellow-300)');
+
+            strengthLevelLabel.textContent = "MEDIUM";
+            break;
+        case 4:
+            level1.style.setProperty('background-color', 'var(--green-200)');
+            level2.style.setProperty('background-color', 'var(--green-200)');
+            level3.style.setProperty('background-color', 'var(--green-200)');
+            level4.style.setProperty('background-color', 'var(--green-200)');
+
+            strengthLevelLabel.textContent = "STRONG";
+            break;
+    }
 }
 
 function updateRangeInput() {
@@ -76,5 +126,9 @@ function generatePassword() {
 
 characterLengthValue.addEventListener("input", updateRangeInput);
 generatePasswordButton.addEventListener("click", generatePassword);
+
+optionsArray.forEach(option => {
+    option.addEventListener("change", strengthLevel);
+})
 
 updateRangeInput();
