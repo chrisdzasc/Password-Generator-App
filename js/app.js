@@ -11,10 +11,9 @@ const uppercaseLettersCheckbox = document.querySelector("#uppercaseLetters");
 const lowercaseLettersCheckbox = document.querySelector("#lowercaseLetters");
 const numbersCheckbox = document.querySelector("#numbers");
 const symbolsCheckbox = document.querySelector("#symbols");
-
 const passwordText = document.querySelector("#password-text");
-
 const generatePasswordButton = document.querySelector("#generatePassword");
+const characterLength = document.querySelector("#characterLengthValue");
 
 function getRandomIndex(array) {
 
@@ -22,6 +21,18 @@ function getRandomIndex(array) {
     const max = array.length - 1;
 
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function updateRangeInput() {
+    const rangeMaxValue = Number(characterLengthValue.max);
+    const rangeMinValue = Number(characterLengthValue.min);
+    const rangeValue = Number(characterLengthValue.value);
+
+    characterLength.textContent = rangeValue;
+
+    let percentage = ((rangeValue - rangeMinValue) / (rangeMaxValue - rangeMinValue) * 100);
+    
+    characterLengthValue.style.setProperty("--range-value", percentage);
 }
 
 function generatePassword() {
@@ -63,5 +74,7 @@ function generatePassword() {
     passwordText.style.color = "#E6E5EA";
 }
 
-
+characterLengthValue.addEventListener("input", updateRangeInput);
 generatePasswordButton.addEventListener("click", generatePassword);
+
+updateRangeInput();
