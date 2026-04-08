@@ -183,6 +183,22 @@ body {
   color: var(--grey-700);
 }
 
+.password-copied {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200);
+}
+
+.password-copied__text {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: var(--green-200);
+}
+
+.hidden {
+  display: none;
+}
+
 .password__button {
   background: none;
   border: none;

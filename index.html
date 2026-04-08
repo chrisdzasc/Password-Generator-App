@@ -22,14 +22,20 @@
   <main class="app">
     <h1 class="app__heading">Password Generator</h1>
 
-    <form class="generator">
+    <div class="generator">
       <div class="password">
 
         <output class="password__text" id="password-text">P4$5W0rD!</output>
 
-        <button class="password__button" aria-label="Copy text">
-          <img class="password__copy" src="./assets/images/icon-copy.svg" alt="">
-        </button>
+        <div class="password-copied">
+          <p class="password-copied__text hidden" id="passwordCopied">COPIED</p>
+
+          <button class="password__button" aria-label="Copy text" id="copyButton">
+            <img class="password__copy" src="./assets/images/icon-copy.svg" alt="">
+          </button>
+        </div>
+
+
 
       </div>
 
@@ -95,7 +101,7 @@
           </button>
         </div>
       </div>
-    </form>
+    </div>
   </main>
 
   <script src="js/app.js"></script>

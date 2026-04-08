@@ -19,6 +19,10 @@ const level2 = document.querySelector("#level2");
 const level3 = document.querySelector("#level3");
 const level4 = document.querySelector("#level4");
 const strengthLevelLabel = document.querySelector("#strengthLevelLabel");
+const copyButton = document.querySelector("#copyButton");
+const passwordCopied =document.querySelector("#passwordCopied");
+
+let passwordGenerated = false;
 
 const optionsArray = [uppercaseLettersCheckbox, lowercaseLettersCheckbox, numbersCheckbox, symbolsCheckbox];
 
@@ -85,6 +89,14 @@ function updateRangeInput() {
     characterLengthValue.style.setProperty("--range-value", percentage);
 }
 
+function copyPassword() {
+    if(passwordGenerated) {
+        navigator.clipboard.writeText(passwordText.textContent);
+
+        passwordCopied.classList.remove('hidden');
+    }
+}
+
 function generatePassword() {
     let pool = [];
     let password = "";
@@ -120,12 +132,16 @@ function generatePassword() {
         password += pool[randomIndex];
     }
 
+    passwordGenerated = true;
+    passwordCopied.classList.add('hidden');
+
     passwordText.textContent = password;
     passwordText.style.color = "#E6E5EA";
 }
 
 characterLengthValue.addEventListener("input", updateRangeInput);
 generatePasswordButton.addEventListener("click", generatePassword);
+copyButton.addEventListener("click", copyPassword);
 
 optionsArray.forEach(option => {
     option.addEventListener("change", strengthLevel);
