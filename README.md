@@ -63,8 +63,10 @@ The challenge was to build out this **Password Generator App** 🔐 and get it l
 
 - ✨ **Polished User Experience:** Features custom-styled checkboxes and interactive hover/states, maintaining high-fidelity to the original design.
 
+## 👤 Author
+
 **Christian Diaz**
 
 - 💼 LinkedIn - [Christian Diaz](https://www.linkedin.com/in/chris-diazasc/)
 - 👾 Frontend Mentor - [@chrisdzasc](https://www.frontendmentor.io/profile/chrisdzasc)
-- 🧩 Frontend Mentor Solution - []()
+- 🧩 Frontend Mentor Solution - [🔐 Responsive Password Generator with Real-Time Strength Validation ✨](https://www.frontendmentor.io/solutions/-responsive-password-generator-with-real-time-strength-validation-wYrH3Dx6Ju)
